@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seletor de Categorias</title>
+<style>
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #94c11f;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 80%;
+    width: 400px; /* Tamanho máximo do container */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+   
+  }
+  img{
+        width: 60%;
+    }
+
+  select {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  code {
+    display: block;
+    padding: 20px;
+    background-color: #ddd;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      max-width: 90%;
+    }
+
+    select {
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <img src="./Colorido-MotionFit (1).png" alt="Logo" class="logo">
+  <h1>Seletor de Categorias</h1>
+  <label for="categorias">Selecione uma categoria:</label>
+  <select id="categorias" onchange="mostrarCodigo()">
+    <option value="">Selecione...</option>
+    <optgroup label="Deduções">
+      <option value="DED1">Cancelamento de plano</option>
+      <option value="DED2">Cheque devolvido</option>
+      <option value="DED3">Outras deduções</option>
+    </optgroup>
+    <optgroup label="Impostos">
+      <option value="IMP1">Simples</option>
+      <option value="IMP2">Iss</option>
+      <option value="IMP3">Pis</option>
+      <option value="IMP4">Cofins</option>
+      <option value="IMP5">Icms</option>
+    </optgroup>
+    <optgroup label="Folha de Pagamento">
+        <option value="FOL1">Salário</option>
+        <option value="FOL2">Salário complementar</option>
+        <option value="FOL3">Salário - Imposto de renda retido na fonte</option>
+        <option value="FOL4">INSS - Funcionário</option>
+        <option value="FOL5">Férias</option>
+        <option value="FOL6">Prestação de serviço avulso</option>
+        <option value="FOL7">Rescisão trabalhista</option>
+        <option value="FOL8">Pensão alimentícia</option>
+        <option value="FOL9">Empréstimo Consignado</option>
+        <option value="FOL10">Décimo Terceiro</option>
+      </optgroup>
+      <optgroup label="Encargos">
+        <option value="FOL11">INSS - Cota Patronal</option>
+        <option value="FOL12">FGTS</option>
+      </optgroup>
+      
+      <optgroup label="Provisões">
+        <option value="FOL13">Férias</option>
+        <option value="FOL14">13º salário</option>
+        <option value="FOL15">Provisão para Bônus e premiação</option>
+        <option value="FOL16">Provisão de INSS</option>
+        <option value="FOL17">Provisão de FGTS</option>
+      </optgroup>
+      
+      <optgroup label="Benefícios">
+        <option value="FOL21">AJUDA DE CUSTO</option>
+        <option value="FOL18">Vale transporte</option>
+        <option value="FOL19">Vale Refeição</option>
+        <option value="FOL20">Vale Alimentação</option>
+      </optgroup>
+      
+      <optgroup label="Outros custos de Pessoal">
+        <option value="FOL21">Provisão para ações trabalhistas</option>
+        <option value="FOL22">Segurança do Trabalho</option>
+        <option value="FOL23">Outras despesas com pessoal</option>
+        <option value="FOL24">Contribuição a Sindicatos</option>
+        <option value="FOL25">PCMSO - Exame Médico</option>
+        <option value="FOL26">Outros encargos sociais</option>
+      </optgroup>
+      <optgroup label="Imóvel">
+        <option value="IMOV1">Aluguel pessoa jurídica</option>
+        <option value="IMOV2">Aluguel pessoa física</option>
+        <option value="IMOV3">Condomínio e Fundo de Marketing</option>
+        <option value="IMOV4">IPTU</option>
+        <option value="IMOV5">Brigada de incêndio</option>
+        <option value="IMOV6">Outras despesas c/aluguel</option>
+      </optgroup>
+      
+      <optgroup label="Contas de Consumo">
+        <option value="CONS1">Energia elétrica</option>
+        <option value="CONS2">Água e esgoto</option>
+        <option value="CONS3">Telefonia fixa</option>
+        <option value="CONS4">Telefonia móvel</option>
+        <option value="CONS5">Gás</option>
+        <option value="CONS6">TV a cabo</option>
+        <option value="CONS7">Outras contas de consumo</option>
+        <option value="CONS8">Serviço de internet</option>
+      </optgroup>
+      
+      <optgroup label="Manutenção">
+        <option value="MAN1">Manutenção edifícios e dependência</option>
+        <option value="MAN2">Manutenção equipamento de ginástica</option>
+        <option value="MAN3">Manutenção equipamento de musculação</option>
+        <option value="MAN4">Manutenção equipamento cardiovascular</option>
+        <option value="MAN5">Manutenção em móveis e eletrônicos</option>
+        <option value="MAN6">Análise de água</option>
+        <option value="MAN7">Serviços de desinsetização</option>
+        <option value="MAN8">Outras manutenções</option>
+      </optgroup>
+      
+      <optgroup label="Serviços Terceirizados">
+        <option value="SERT1">Serviço de limpeza</option>
+        <option value="SERT2">Advogados - Extra Franquia</option>
+        <option value="SERT3">Serviço de informática</option>
+        <option value="SERT4">Serviço de avaliação médica</option>
+        <option value="SERT5">Serviço nutricional</option>
+        <option value="SERT6">Serviço de manobrista</option>
+        <option value="SERT7">Serviço de segurança e portaria</option>
+        <option value="SERT8">Serviço de lavanderia</option>
+        <option value="SERT9">Serviço de sonorização</option>
+        <option value="SERT10">Serviço de motoboy</option>
+        <option value="SERT11">Serviço de equipamento segurança e alarme</option>
+        <option value="SERT12">Imposto retido</option>
+        <option value="SERT13">Outras prestações de serviços</option>
+      </optgroup>
+      
+      <optgroup label="Outros">
+        <option value="MAT1">Material de Consumo - Copa e cozinha</option>
+        <option value="MAT2">Material de Consumo - Material de escritório</option>
+        <option value="MAT3">Material de Consumo - Material de informática</option>
+        <option value="MAT4">Material de Consumo - Material de limpeza</option>
+        <option value="MAT5">Material de Consumo - Outros materiais de consumo</option>
+        <option value="MAT6">Material de Consumo - Aquisição de bens de pequeno valor</option>
+      </optgroup>
+      
+      <optgroup label="Impostos e taxas">
+        <option value="IMPT1">Taxa prefeitura de funcionamento</option>
+        <option value="IMPT2">ECAD</option>
+        <option value="IMPT3">Outros impostos e taxas</option>
+        <option value="IMPT4">Imposto super simples</option>
+      </optgroup>
+      
+      <optgroup label="Outras">
+        <option value="OUT11">Despesas do caixa local</option>
+        <option value="OUT12">Cartão de identificação</option>
+        <option value="OUT13">Condução - ônibus, metrô, taxi</option>
+        <option value="OUT14">Chaveiro</option>
+        <option value="OUT15">Cópia e xerox</option>
+        <option value="OUT16">Custa processo judicial</option>
+        <option value="OUT17">Despesas Gerais</option>
+        <option value="OUT18">Despesa com correio</option>
+        <option value="OUT19">Frete e transporte</option>
+        <option value="OUT20">Frutas para sala vip</option>
+        <option value="OUT21">Indenização à cliente</option>
+        <option value="OUT22">IPVA</option>
+        <option value="OUT23">Locação de máquina e equipamento</option>
+        <option value="OUT24">Material médico</option>
+        <option value="OUT25">Material piscina</option>
+        <option value="OUT26">Multa de Trânsito</option>
+        <option value="OUT27">Pedágio</option>
+        <option value="OUT28">Reembolso de despesas</option>
+        <option value="OUT29">Refeição</option>
+        <option value="OUT30">Compra de toalhas</option>
+        <option value="OUT31">Outras despesas operacionais</option>
+        <option value="OUT32">Assinatura de jornal e revista</option>
+        <option value="OUT33">Serviço de tradução</option>
+        <option value="OUT34">Seguros (ex. Imóvel)</option>
+        <option value="OUT35">Marketing Local</option>
+        <option value="OUT36">Material Gráfico</option>
+      </optgroup>
+      
+      <optgroup label="Despesas Operacionais">
+        <option value="MKT1">Despesas com Agências de Publicidade (MKT)</option>
+        <option value="MKT2">Despesas com Mídia, TV e Rádio (MKT)</option>
+        <option value="MKT3">Despesas com Produção de Propaganda (MKT)</option>
+        <option value="MKT4">Despesas com Website (MKT)</option>
+        <option value="MKT5">Assessoria de Imprensa (MKT)</option>
+        <option value="MKT6">Material Promocional (MKT)</option>
+        <option value="MKT7">Visual Merchandising (MKT)</option>
+        <option value="MKT8">Brindes, Eventos e Patrocínios (MKT)</option>
+        <option value="MKT9">Transportes e Correios (MKT)</option>
+        <option value="MKT10">Marketing Staff (MKT)</option>
+      </optgroup>
+      
+      <optgroup label="Despesas do Escritório Central">
+        <option value="ESC1">Material de Consumo do Escritório Central</option>
+        <option value="ESC2">Serviços de Motoboy do Escritório Central</option>
+        <option value="ESC3">Serviços Gráficos e Xerox do Escritório Central</option>
+        <option value="ESC4">Gastos com Veículos de malote</option>
+        <option value="ESC5">Links e Derivados de Comunicação Central</option>
+        <option value="ESC6">Armazenagem de Documentos</option>
+        <option value="ESC7">Telefonia Fixa do Escritório Central</option>
+        <option value="ESC8">Combustível e lubrificante</option>
+      </optgroup>
+      
+      <optgroup label="Administração Compartilhada">
+        <option value="ADMC1">Despesa cartorária</option>
+        <option value="ADMC2">Armazenagem de Equipamentos</option>
+        <option value="ADMC3">Franquia de Honorários Advocatícios</option>
+        <option value="ADMC4">Taxas de manutenção de softwares</option>
+        <option value="ADMC5">Lavagem de Uniformes</option>
+        <option value="ADMC6">Serviços de auditoria financeira</option>
+        <option value="ADMC7">Serviços de Contabilidade</option>
+        <option value="ADMC8">Compra de Uniformes</option>
+        <option value="ADMC9">Cursos e Treinamentos</option>
+        <option value="ADMC10">Serviços de Consultoria</option>
+        <option value="ADMC11">Viagens e Estadias</option>
+        <option value="ADMC12">Reembolso de Despesas Diretoria</option>
+        <option value="ADMC13">Eventos Administrativos</option>
+        <option value="ADMC14">Manutenção de veículos</option>
+        <option value="ADMC15">Despesa com franquia</option>
+        <option value="ADMC16">Locação veículo</option>
+        <option value="ADMC17">Doações</option>
+        <option value="ADMC18">Outras Despesas Operacionais</option>
+        <option value="ADMC19">Projetos Estratégicos</option>
+        <option value="ADMC20">Despesas não Recorrentes</option>
+      </optgroup>
+      
+      <optgroup label="Serviço administrativo - over-head (7%)">
+        <option value="ROY1">Serviço administrativo - over-head</option>
+        <option value="ROY2">Royalties</option>
+        <option value="ROY3">Custo e Despesa - Holding</option>
+      </optgroup>
+      
+      <optgroup label="Despesas Pre-Operacionais">
+        <option value="PRE1">Advogados pré-operacional</option>
+        <option value="PRE2">Custas com documentação</option>
+        <option value="PRE3">Projetos</option>
+        <option value="PRE4">Locação</option>
+        <option value="PRE5">Gastos com auditoria</option>
+        <option value="PRE6">Gasto com pessoal</option>
+        <option value="PRE7">Gastos com utilidades</option>
+        <option value="PRE8">Gastos com marketing</option>
+        <option value="PRE9">Outras Despesas Pré-Operacionais</option>
+      </optgroup>
+            
+  </select>
+  <code id="codigo"></code>
+</div>
+
+<script>
+  function mostrarCodigo() {
+    const select = document.getElementById('categorias');
+    const codigo = document.getElementById('codigo');
+    const categoriaSelecionada = select.options[select.selectedIndex].value;
+    codigo.textContent = `Categoria selecionada: ${categoriaSelecionada}`;
+  }
+</script>
+</body>
+</html>
